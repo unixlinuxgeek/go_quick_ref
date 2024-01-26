@@ -1,19 +1,7 @@
-package main
+### ReadDir
 
-import (
-"fmt"
-"os"
-"log"
-)
+ReadDir читает указанный каталог, возвращая все его записи каталога, отсортированные по имени файла.
+Если при чтении каталога возникает ошибка, ReadDir возвращает записи,
+которые он мог прочитать до ошибки, вместе с самой ошибкой.
 
-func main() {
-entries, err := os.ReadDir("./")
-if err != nil {
-log.Fatal(err)
-}
-
-    for _, e := range entries {
-            fmt.Println(e.Name())
-    }
-}
-
+https://github.com/unixlinuxgeek/go_quick_ref/tree/main/std_lib/os/ReadDir/ReadDir.go
